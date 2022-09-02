@@ -6,9 +6,9 @@
 	{% for venue in results.data %}
 	<li>
 		<a href="/venues/{{ venue.id }}">
-			<i class="fas fa-music"></i>
+			<img width="50" height="50" src="{{ venue.image_link }}" alt="venue Image" style="border-radius: 40%; border: 5px solid #07EFB8;"  class="rounded"/>
 			<div class="item">
-				<h5>{{ venue.name }}</h5>
+				<h5 style="margin-top: 1rem;">{{ venue.name }}</h5>
 			</div>
 		</a>
 	</li>

@@ -5,9 +5,9 @@
 	{% for artist in artists %}
 	<li>
 		<a href="/artists/{{ artist.id }}">
-			<i class="fas fa-users"></i>
+			<img width="50" height="50" src="{{ artist.image_link }}" alt="Artist Image" style="border-radius: 50%; border: 5px solid #07EFB8;"  class="rounded"/>
 			<div class="item">
-				<h5>{{ artist.name }}</h5>
+				<h5 style="margin-top: 1rem;">{{ artist.name }}</h5>
 			</div>
 		</a>
 	</li>

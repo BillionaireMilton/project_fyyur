@@ -1,14 +1,14 @@
 {% extends 'layouts/main.html' %}
 {% block title %}Fyyur | Venues Search{% endblock %}
 {% block content %}
-<h3>Number of search results for "{{ search_term }}": {{ results.count }}</h3>
+<h3>Number of search results for "{{ search_term }}": {{ results|length }}</h3>
 <ul class="items">
-	{% for venue in results.data %}
+	{% for venue in results %}
 	<li>
 		<a href="/venues/{{ venue.id }}">
-			<img width="50" height="50" src="{{ venue.image_link }}" alt="venue Image" style="border-radius: 40%; border: 5px solid #07EFB8;"  class="rounded"/>
+			<i class="fas fa-music"></i>
 			<div class="item">
-				<h5 style="margin-top: 1rem;">{{ venue.name }}</h5>
+				<h5>{{ venue.name }}</h5>
 			</div>
 		</a>
 	</li>

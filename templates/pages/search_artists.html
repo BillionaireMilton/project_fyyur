@@ -1,14 +1,14 @@
 {% extends 'layouts/main.html' %}
 {% block title %}Fyyur | Artists Search{% endblock %}
 {% block content %}
-<h3>Number of search results for "{{ search_term }}": {{ results.count }}</h3>
+<h3>Number of search results for "{{ search_term }}": {{ results|length }}</h3>
 <ul class="items">
-	{% for artist in results.data %}
+	{% for artist in results %}
 	<li>
 		<a href="/artists/{{ artist.id }}">
-			<img width="50" height="50" src="{{ artist.image_link }}" alt="Artist Image" style="border-radius: 50%; border: 5px solid #07EFB8;"  class="rounded"/>
+			<i class="fas fa-users"></i>
 			<div class="item">
-				<h5 style="margin-top: 1rem;">{{ artist.name }}</h5>
+				<h5>{{ artist.name }}</h5>
 			</div>
 		</a>
 	</li>
